@@ -20,61 +20,95 @@ function iniciaJogo() {
           let vitoriaUsuario = alert('Vitória do usuário')
           let vitoriaCpu = alert('Vitória do computador')
 
+          while (somaUsuario < 22 && somaUsuario < 22) {
+               if (((usuario1.valor === 11) && (usuario2.valor === 11)) || ((cpu2.valor === 11) && (cpu2.valor === 11))) {
+                    let novoJogo = confirm(`Os pontos do usuário : ${somaUsuario} e os pontos do computador ${somaCpu}. Vamos inciar novamente!`)
 
-          if (((usuario1.valor === 11) && (usuario2.valor === 11)) || ((cpu2.valor === 11) && (cpu2.valor === 11))) {
-               alert(`Os pontos do usuário : ${somaUsuario} e os pontos do computador ${somaCpu}. Vamos inciar novamente!`)
-
-          } else {
-               pergunta1
-
-               if (pergunta1) {
-                    usuario3
-                    cpu3
-                    somaUsuario = usuario1.valor + usuario2.valor + usuario3.valor
-                    somaCpu = cpu1.valor + cpu2.valor + cpu3.valor
-                    arrayCartasUsuario.push(usuario3.valor)
-                    arrayCartasCpu.push(cpu3.valor)
-                    alert(`Os pontos do usuário : ${somaUsuario} e os pontos do computador ${somaCpu}. Vamos inciar novamente!`)
-                    console.log(arrayCartasUsuario);
-                    console.log(arrayCartasCpu);
                } else {
-                    //console.log(`Os pontos do usuário são ${somaUsuario} e do computador são ${somaCpu}`);
-                    confirm(`Os pontos do usuário : ${somaUsuario} e os pontos do computador ${somaCpu}. Vamos inciar novamente!`)
-                    console.log(somaUsuario);
-                    console.log(somaCpu);
-               }
+                    if (somaUsuario <= 21) { alert(`vitória do usuário na primeira roadada`) }
+                    else if (somaCpu <= 21) { alert(`vitória do computador na primeira roadada`) }
+                    else pergunta1
 
-               if ((somaUsuario <= 21) && (somaCpu > 21)){
-                    vitoriaUsuario
-               } else if ((somaUsuario > 21) && (somaCpu <= 21)) {
-                    vitoriaCpu
-               } else if (pergunta2)
-                    if (pergunta2) {
-                         usuario4
-                         cpu4
-                         somaUsuario = usuario1.valor + usuario2.valor + usuario3.valor + usuario4.valor
-                         somaCpu = cpu1.valor + cpu2.valor + cpu3.valor + cpu4.valor
-                         arrayCartasUsuario.push(usuario4.valor)
-                         arrayCartasCpu.push(cpu4.valor)
+                    if (pergunta1) {
+                         usuario3
+                         cpu3
+                         somaUsuario = usuario1.valor + usuario2.valor + usuario3.valor
+                         somaCpu = cpu1.valor + cpu2.valor + cpu3.valor
+                         arrayCartasUsuario.push(usuario3.valor)
+                         arrayCartasCpu.push(cpu3.valor)
+                         // alert(`Os pontos do usuário : ${somaUsuario} e os pontos do computador ${somaCpu}. Vamos inciar novamente!`)
+                         pergunta2
                          console.log(arrayCartasUsuario);
                          console.log(arrayCartasCpu);
-                    } else {
-                         if (somaUsuario <= 21) {
-                              vitoriaUsuario
-                         } else {
-                              vitoriaCpu
-                         }
-                         // console.log(`Os pontos do usuário são ${somaUsuario} e do computador são ${somaCpu}`);
-                         //console.log(somaUsuario);
-                         //console.log(somaCpu);
-                    }
-          }
-     } else { alert('O jogo acabou!')
+                         if (pergunta2 === true && somaUsuario <= 21 && somaCpu <= 21) {
+                              usuario4
+                              cpu4
+                              somaUsuario = usuario1.valor + usuario2.valor + usuario3.valor + usuario4.valor
+                              somaCpu = cpu1.valor + cpu2.valor + cpu3.valor + cpu4.valor
+                              arrayCartasUsuario.push(usuario4.valor)
+                              arrayCartasCpu.push(cpu4.valor)
+                              // alert(`Os pontos do usuário : ${somaUsuario} e os pontos do computador ${somaCpu}. Vamos inciar novamente!`)
+                              console.log(arrayCartasUsuario);
+                              console.log(arrayCartasCpu);
 
-     
-     //                          } else { alert(`O computador venceu com ${somaCpu}pontos.`) }
+
+                         } else {
+                              alert('acabou jono na pergunta 2 prosseguir?')
+                         }
+                    } else {
+                         alert('acabou jono na pergunta 1 prosseguir?')
+
+
+                    }
+               }
+          }
+     } else { alert('O jogo acabou!') }
 }
-}
+
+
+// } else if (novoJogo == true) {
+
+// }
+// //console.log(`Os pontos do usuário são ${somaUsuario} e do computador são ${somaCpu}`);
+// confirm(`Os pontos do usuário : ${somaUsuario} e os pontos do computador ${somaCpu}. Vamos inciar novamente!`)
+// console.log(somaUsuario);
+// console.log(somaCpu);
+// }
+
+// if ((somaUsuario <= 21) && (somaCpu > 21)) {
+//      vitoriaUsuario
+// } else if ((somaUsuario > 21) && (somaCpu <= 21)) {
+//      vitoriaCpu
+// } else if (pergunta2)
+//      if (pergunta2) {
+//           usuario4
+//           cpu4
+//           somaUsuario = usuario1.valor + usuario2.valor + usuario3.valor + usuario4.valor
+//           somaCpu = cpu1.valor + cpu2.valor + cpu3.valor + cpu4.valor
+//           arrayCartasUsuario.push(usuario4.valor)
+//           arrayCartasCpu.push(cpu4.valor)
+//           console.log(arrayCartasUsuario);
+//           console.log(arrayCartasCpu);
+//      } else {
+//           if (somaUsuario <= 21) {
+//                vitoriaUsuario
+//           } else {
+//                vitoriaCpu
+//           }
+//           // console.log(`Os pontos do usuário são ${somaUsuario} e do computador são ${somaCpu}`);
+//           //console.log(somaUsuario);
+//           //console.log(somaCpu);
+//      }
+// }
+
+
+
+//      //                          } else { alert(`O computador venceu com ${somaCpu}pontos.`) }
+// }
+//      } 
+
+// }
+
 
 
 
