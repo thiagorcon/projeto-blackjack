@@ -109,7 +109,7 @@ function iniciaJogo() {
      }
 
      else {
-          alert('sair do jogo pegunta 1')
+          alert('sair do jogo pergunta 1 da condicao')
      }
 
 }
